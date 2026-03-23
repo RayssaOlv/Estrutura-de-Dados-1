@@ -29,7 +29,7 @@ int main() {
 
     do {
         exibirMenu();
-        std::cout << "Escolha uma opção: ";
+        std::cout << "Escolha uma opÃ§Ã£o: ";
         std::cin >> opcao;
 
         if (opcao == 1) {
@@ -39,9 +39,9 @@ int main() {
         } else if (opcao == 3) {
             calcularFaturamento();
         } else if (opcao == 0) {
-            std::cout << "Finalizando o programa. Até mais!" << std::endl;
+            std::cout << "Finalizando o programa." << std::endl;
         } else {
-            std::cout << "Opção inválida. Tente novamente." << std::endl;
+            std::cout << "OpÃ§Ã£o invÃ¡lida. Tente novamente." << std::endl;
         }
         std::cout << std::endl;
     } while (opcao != 0);
@@ -61,7 +61,7 @@ void exibirMenu() {
     std::cout << "--- Sistema de Bilheteria ---" << std::endl;
     std::cout << "0. Finalizar" << std::endl;
     std::cout << "1. Reservar poltrona" << std::endl;
-    std::cout << "2. Mapa de ocupação" << std::endl;
+    std::cout << "2. Mapa de ocupaÃ§Ã£o" << std::endl;
     std::cout << "3. Faturamento" << std::endl;
 }
 
@@ -70,7 +70,7 @@ bool validarEntrada(int fileira, int poltrona) {
         poltrona >= 1 && poltrona <= NUM_POLTRONAS) {
         return true;
     } else {
-        std::cout << "Entrada inválida. Fileira deve ser entre 1 e " << NUM_FILEIRAS
+        std::cout << "Entrada invÃ¡lida. Fileira deve ser entre 1 e " << NUM_FILEIRAS
                   << ", e Poltrona entre 1 e " << NUM_POLTRONAS << "." << std::endl;
         return false;
     }
@@ -91,13 +91,13 @@ void reservarPoltrona() {
             teatro[op_fileira][op_poltrona] = true; 
             std::cout << "Poltrona F" << fileira << " P" << poltrona << " reservada com sucesso!" << std::endl;
         } else {
-            std::cout << "A poltrona F" << fileira << " P" << poltrona << " já está ocupada." << std::endl;
+            std::cout << "A poltrona F" << fileira << " P" << poltrona << " jÃ¡ estÃ¡ ocupada." << std::endl;
         }
     }
 }
 
 void exibirMapaOcupacao() {
-    std::cout << std::endl << "--- Mapa de Ocupação do Teatro ---" << std::endl;
+    std::cout << std::endl << "--- Mapa de OcupaÃ§Ã£o do Teatro ---" << std::endl;
     std::cout << "Legenda: . = Vago, # = Ocupado" << std::endl << std::endl;
 
     // Arrumas poltronas dps
@@ -140,7 +140,7 @@ void calcularFaturamento() {
         }
     }
 
-    std::cout << std::endl << "--- Relatório de Faturamento ---" << std::endl;
+    std::cout << std::endl << "--- RelatÃ³rio de Faturamento ---" << std::endl;
     std::cout << "Qtde de lugares ocupados: " << lugares_ocupados << std::endl;
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "Valor da bilheteria: R$ " << faturamento_total << std::endl;
